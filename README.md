@@ -181,6 +181,7 @@ cv2.destroyAllWindows()
 
 ### output
 
+![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/acb5e470-7c2f-4e61-a8a6-ee077133902f)
 
 
 ### ix) Split and merge RGB Image
