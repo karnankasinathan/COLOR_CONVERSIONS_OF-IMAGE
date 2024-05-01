@@ -45,60 +45,55 @@ Split and merge HSV Image
 ### i) Read and display the image
 ```
 import cv2
-image=cv2.imread('pig.jpg',1)
-image=cv2.resize(image,(400,300))
-cv2.imshow('Piggy-Friends',image)
+image=cv2.imread('img',1)
+cv2.imshow('image',image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 ### output
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/87eae3bd-3b9f-488b-b407-a6dfb7e0b0fd)
+![1](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/ad9f6826-a2f7-4397-8753-ee0571f08bbc)
+
 
 ### ii)Write the image
 
 ```
-import cv2
-image=cv2.imread('pig.jpg',0)
 cv2.imwrite('test.jpg',image)
 ```
 ### output
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/c05b5297-3d37-4b02-99ff-36dd7f234b57)
+![2](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/65774c4b-769c-43ee-b93b-4432723e3115)
 
 ### iii)Shape of the Image
 
 ```
-import cv2
-image=cv2.imread('pig.jpg',1)
 print(image.shape)
 ```
 ### output
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/407154df-a565-45ab-ba5e-d96ef0a65423)
+![3](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/b3c8a1a9-2555-429f-bc73-f7239718ef62)
+
 
 ### iv)Access rows and columns
 ```
 import random
 import cv2
-image=cv2.imread('pig.jpg',1)
-image=cv2.resize(image,(400,400))
-for i in range (150,200):
+image=cv2.imread('img',1)
+for i in range (250,500):
     for j in range(image.shape[1]):
         image[i][j]=[random.randint(0,255),
         random.randint(0,255),
         random.randint(0,255)] 
-cv2.imshow('part image',image)
+cv2.imshow('part',image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/17719edb-f4e7-433d-acf8-52d8737db253)
+![4](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/04e34d31-a16f-45ee-b1f6-dc6da7c65bdb)
 
 
 ### v)Cut and paste portion of image
 ```
 import cv2
-image=cv2.imread('pig.jpg',1)
-image=cv2.resize(image,(400,400))
+image=cv2.imread('img',1)
 tag =image[150:200,110:160]
 image[110:160,150:200] = tag
 cv2.imshow('image1',image)
@@ -108,14 +103,14 @@ cv2.destroyAllWindows()
 
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/3d7dfff7-2dee-4f24-a2c7-81e6e8836c8e)
+![5](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/c7a54a98-96be-4873-8f39-f4ac0610a3a3)
+
 
 
 ### vi) BGR and RGB to HSV and GRAY
 ```
 import cv2
-img = cv2.imread('pig.jpg',1)
-img = cv2.resize(img,(300,200))
+img = cv2.imread('img',1)
 cv2.imshow('Original Image',img)
 
 hsv1 = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -136,13 +131,14 @@ cv2.destroyAllWindows()
 
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/dac6a029-8f8d-4573-ba26-f9ee1ba9eebb)
+![6](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/1a251b78-a10f-43ae-8237-c9f370da585c)
+
 
 
 ### vii) HSV to RGB and BGR
 ```
 import cv2
-img = cv2.imread('pig.jpg')
+img = cv2.imread('img')
 img = cv2.resize(img,(300,200))
 
 img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -160,12 +156,13 @@ cv2.destroyAllWindows()
 
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/86f3ccab-b075-4050-9e65-f9ac8955ed5c)
+![7](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/66a84adf-50a9-46ed-86ff-e5a7a023f3b8)
+
 
 ### viii) RGB and BGR to YCrCb
 ```
 import cv2
-img = cv2.imread('pig.jpg')
+img = cv2.imread('img')
 img = cv2.resize(img,(300,200))
 cv2.imshow('Original RGB Image',img)
 
@@ -181,13 +178,13 @@ cv2.destroyAllWindows()
 
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/acb5e470-7c2f-4e61-a8a6-ee077133902f)
+![8](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/5af6cbfe-88b0-4cd0-99aa-ee7ce7a32b25)
 
 
 ### ix) Split and merge RGB Image
 ```
 import cv2
-img = cv2.imread('pig.jpg',1)
+img = cv2.imread('img',1)
 img = cv2.resize(img,(300,200))
 
 R = img[:,:,2]
@@ -206,12 +203,13 @@ cv2.destroyAllWindows()
 ```
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/802bef97-b707-4798-848c-794cd71de596)
+
+![9](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/e867748e-899d-4b3b-93d2-23eea20dcbc6)
 
 ### x) Split and merge HSV Image
 ```
 import cv2
-img = cv2.imread("pig.jpg",1)
+img = cv2.imread("img",1)
 img = cv2.resize(img,(200,200))
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
 
@@ -230,7 +228,7 @@ cv2.destroyAllWindows()
 
 ### output
 
-![image](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/6a4ab099-53dd-4d7b-be13-9675a06ee7a8)
+![10](https://github.com/karnankasinathan/COLOR_CONVERSIONS_OF-IMAGE/assets/118787064/b9b89d60-b0a4-4c74-9f8e-5a37ba28ccbf)
 
 
 ## Result:
